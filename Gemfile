@@ -32,6 +32,11 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug', '~> 3.9'
+  gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'rspec-rails', '~> 5.1'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'pry-doc', '~> 1.3'
 end
 
 group :development do
@@ -43,7 +48,6 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'pry-byebug', '~> 3.9'
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
