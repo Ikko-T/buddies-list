@@ -30,6 +30,19 @@ user = User.create!(
   buddy.save!
 end
 
-User.create!(email: email, password: password)
+user1 = User.create!(email: email, password: password)
+
+3.times do
+  buddy1 = user1.buddies.build(
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      email: Faker::Internet.email,
+      phone: Faker::PhoneNumber.cell_phone,
+      age: rand(0..200),
+      user_id: user1.id
+    )
+
+  buddy1.save!
+end
 
 puts "Initial data inserted successfully!"
