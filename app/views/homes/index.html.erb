@@ -1,2 +1,14 @@
-<h1>Homes#index</h1>
-<p>Find me in app/views/homes/index.html.erb</p>
+<div class="card text-center">
+  <div class="card-header">
+    <h1>Welcome to Buddy App!</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title mb-3">Let's make buddies!</h5>
+    <% if user_signed_in? %>
+      <%= link_to "Add Buddies", new_buddy_path, class: "btn btn-secondary" %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-secondary" %>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+</div>
