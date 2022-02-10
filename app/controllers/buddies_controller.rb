@@ -11,9 +11,14 @@ class BuddiesController < ApplicationController
   end
 
   def create
-    @buddy = current_user.buddies.create!(buddy_params)
-    flash[:notice] = "Buddy was successfully created"
-    render :show
+    @buddy = current_user.buddies.build(buddy_params)
+
+    if @buddy.save
+      redirect_to @buddy, notice: "Buddy was successfully created"
+    else
+      flash.now[:alert] = "Buddy was NOT created!"
+      render :new
+    end
   end
 
   def show
@@ -23,15 +28,17 @@ class BuddiesController < ApplicationController
   end
 
   def update
-    @buddy.update!(buddy_params)
-    flash[:notice] = "Buddy was successfully updated"
-    render :show
+    if @buddy.update(buddy_params)
+      redirect_to @buddy, notice: "Buddy was successfully updated"
+    else
+      flash.now[:alert] = "Buddy was NOT updated"
+      render :edit
+    end
   end
 
   def destroy
-    @buddy.destroy!
-    flash[:alert] = "Buddy was successfully deleted"
-    redirect_to users_path
+    @buddy.destroy
+    redirect_to users_path, alert: "Buddy was successfully deleted"
   end
 
   private

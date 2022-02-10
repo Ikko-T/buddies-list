@@ -1,32 +1,30 @@
-<div class="container">
-  <% if user_signed_in? %>
-    <h2 class="text-center mb-3">Buddy List</h2>
-      <table class="table table-striped table-bordered table-hover">
-        <thead class="table-dark">
+<% if user_signed_in? %>
+  <h2 class="text-center mb-3">Buddy List</h2>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Age</th>
+          <th>User</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @buddies.each do |buddy| %>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Age</th>
-            <th>User</th>
+            <td><%= buddy.first_name + ' ' + buddy.last_name %></td>
+            <td><%= buddy.email %></td>
+            <td><%= buddy.phone %></td>
+            <td><%= buddy.age %></td>
+            <td><%= buddy.user.nickname.present? ? "#{buddy.user.nickname}" : "#{buddy.user.email}" %></td>
           </tr>
-        </thead>
+        <% end %>
+      </tbody>
+    </table>
 
-        <tbody>
-          <% @buddies.each do |buddy| %>
-            <tr>
-              <td><%= buddy.first_name + ' ' + buddy.last_name %></td>
-              <td><%= buddy.email %></td>
-              <td><%= buddy.phone %></td>
-              <td><%= buddy.age %></td>
-              <td><%= buddy.user.nickname.present? ? "#{buddy.user.nickname}" : "#{buddy.user.email}" %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
-      <%= link_to "New Buddy", new_buddy_path, class: "btn btn-primary form-control" %>
-  <% else %>
-    <%= render "home" %>
-  <% end %>
-</div>
+    <%= link_to "New Buddy", new_buddy_path, class: "btn btn-primary form-control" %>
+<% else %>
+  <%= render "home" %>
+<% end %>
