@@ -1,5 +1,5 @@
 class Buddy < ApplicationRecord
-  belongs_to :users, optional: true
+  belongs_to :user, optional: true
   before_save { self.email = email.downcase}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

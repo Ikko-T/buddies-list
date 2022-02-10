@@ -7,23 +7,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Top", buddies_path, class: "nav-link" %>
+          <li class="nav-item p-2 text-white">
+            <%= current_user.nickname.present? ? "【USER: #{current_user.nickname}】" : "【USER: #{current_user.email}】" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Add Buddies", new_buddy_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "My Page", users_path, class: "nav-link" %>
+            <%= link_to "My Buddies", users_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "Add Buddies", new_buddy_path, class: "nav-link" %>
           </li>
-          <li class="nav-item p-2 text-white">
-            <%= "USER: #{current_user.email}" %>
+          <li class="nav-item">
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% else %>
           <li class="nav-item">
