@@ -14,11 +14,11 @@
       <tbody>
         <% @buddies.each do |buddy| %>
           <tr>
-            <td><%= buddy.first_name + ' ' + buddy.last_name %></td>
+            <td><%= full_name(buddy) %></td>
             <td><%= buddy.email %></td>
             <td><%= buddy.phone %></td>
             <td><%= buddy.age %></td>
-            <td><%= buddy.user.nickname.present? ? "#{buddy.user.nickname}" : "#{buddy.user.email}" %></td>
+            <td><%= nickname_or_email(buddy) %></td>
           </tr>
         <% end %>
       </tbody>
