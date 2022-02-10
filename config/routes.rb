@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  root to: "buddies#index"
   devise_for :users
   resources :buddies
-  root "homes#index"
+  resource :users, only: :show
 end

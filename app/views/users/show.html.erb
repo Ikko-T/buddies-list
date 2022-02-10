@@ -1,0 +1,22 @@
+<div class="container">
+<h2 class="text-center mb-3">My Buddy List</h2>
+  <% @buddies.each do |buddy| %>
+    <%= link_to(buddy_path(buddy), class: "text-decoration-none text-dark") do %>
+      <div class="card bg-light text-dark mb-3">
+        <div class="card-body buddy-card">
+          <h2 class="card-title">
+            <%= buddy.first_name %>
+            <%= buddy.last_name %>
+          </h2>
+          <p class="card-text">
+            <i class="fa-solid fa-envelope"></i><span class="ms-1"><%= buddy.email %></span>
+            <i class="fa-solid fa-square-phone"></i><span class="ms-1"><%= buddy.phone %></span>
+            <i class="fa-solid fa-image-portrait"></i><span class="ms-1"><%= buddy.age %></span>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "New Buddy", new_buddy_path, class: "btn btn-primary form-control mb-3" %>
+  <%= link_to 'Back to Buddy List', root_path, class: "btn btn-secondary form-control mb-3" %>
+</div>

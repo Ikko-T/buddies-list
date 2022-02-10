@@ -1,0 +1,30 @@
+<%= form_with model: @buddy, local: true do |form| %>
+  <div class="field form-group mb-3">
+    <% form.label :first_name %>
+    <%= form.text_field :first_name, class: "form-control", placeholder: "First name" %>
+  </div>
+
+  <div class="field form-group mb-3">
+    <% form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-control", placeholder: "Last name" %>
+  </div>
+
+  <div class="field form-group mb-3">
+    <% form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field form-group mb-3">
+    <% form.label :phone %>
+    <%= form.text_field :phone, class: "form-control", placeholder: "Phone i.e. 000-000-0000" %>
+  </div>
+
+  <div class="field form-group mb-3">
+    <% form.label :age %>
+    <%= form.text_field :age, class: "form-control", placeholder: "age" %>
+  </div>
+
+  <div class="actions mb-3">
+    <%= form.submit class: "btn btn-primary form-control" %>
+  </div>
+<% end %>
