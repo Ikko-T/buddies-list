@@ -1,17 +1,15 @@
-<div class="container">
-  <div class="card mb-3">
-    <div class="card-header text-center">
-      <h2 class="card-title"><%= @buddy.first_name + ' ' + @buddy.last_name %></h2>
-    </div>
-    <ul class="list-group list-group-flush text-center">
-      <li class="list-group-item"><%= @buddy.email %></li>
-      <li class="list-group-item"><%= @buddy.phone %></li>
-      <li class="list-group-item"><%= @buddy.age %></li>
-    </ul>
-    <div class="card-body text-center">
-      <%= link_to 'Edit', edit_buddy_path(@buddy), class: "btn btn-outline-secondary" %>
-      <%= link_to 'Delete', @buddy, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
-    </div>
+<div class="card mb-3">
+  <div class="card-header text-center">
+    <h2 class="card-title"><%= @buddy.first_name + ' ' + @buddy.last_name %></h2>
   </div>
-  <%= link_to 'Back to My Buddy List', users_path, class: "btn btn-secondary form-control mb-3" %>
+  <ul class="list-group list-group-flush text-center">
+    <li class="list-group-item"><%= @buddy.email %></li>
+    <li class="list-group-item"><%= @buddy.phone %></li>
+    <li class="list-group-item"><%= @buddy.age %></li>
+  </ul>
+  <div class="card-body text-center">
+    <%= link_to 'Edit', edit_buddy_path(@buddy), class: "btn btn-outline-secondary" %>
+    <%= link_to 'Delete', @buddy, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+  </div>
 </div>
+<%= link_to 'Back to My Buddy List', users_path, class: "btn btn-secondary form-control mb-3" %>
