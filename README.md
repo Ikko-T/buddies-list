@@ -48,7 +48,7 @@ This is a Rails CRUD application built out for practice purposes. CRUD operation
 - Update
 - Delete
 
-Through developing this very simple, functional [Buddies List][project-url] application, it gives you a good understanding of Rails principles of the MVC architecture (Model-View-Controller pattern). For a demonstration, please refer to the [Usage](#usage).
+Through developing this very simple, functional [Buddies List][project-url] application, I waa trying to get a better understanding of Rails principles of the MVC architecture (Model-View-Controller pattern). For a demonstration, please refer to the [Usage](#usage).
 <br>
 
 ### Build With
