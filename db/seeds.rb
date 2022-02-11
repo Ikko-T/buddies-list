@@ -13,38 +13,40 @@ nickname = "AJ"
 
 ActiveRecord::Base.connection.execute("TRUNCATE TABLE users RESTART IDENTITY CASCADE")
 
-user = User.create!(
+user_1 = User.create!(
   email: Faker::Internet.email,
   password: "Faker::Internet.password(min_length: 8, max_length: 20, mix_case: true)",
   nickname: Faker::Name.initials
 )
 
-5.times do
-  buddy = user.buddies.build(
+10.times do
+  buddy_1 = user_1.buddies.build(
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
       email: Faker::Internet.email,
       phone: Faker::PhoneNumber.cell_phone,
       age: rand(0..200),
-      user_id: user.id,
+      user_id: user_1.id,
     )
-
-    buddy.save!
-  end
-
-  user1 = User.create!(email: email, password: password, nickname: nickname)
-
-  3.times do
-    buddy1 = user1.buddies.build(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      email: Faker::Internet.email,
-      phone: Faker::PhoneNumber.cell_phone,
-      age: rand(0..200),
-      user_id: user1.id,
-    )
-
-  buddy1.save!
+  buddy.save!
 end
 
-puts "Initial data inserted successfully!"
+user_2 = User.create!(
+  email: email,
+  password: password,
+  nickname: nickname
+)
+
+8.times do
+  buddy_2 = user_2.buddies.build(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    phone: Faker::PhoneNumber.cell_phone,
+    age: rand(0..200),
+    user_id: user_2.id,
+  )
+  buddy_2.save!
+end
+
+puts "Initial data successfully inserted!"
