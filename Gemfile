@@ -19,11 +19,11 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'faker', '~> 1.6', '>= 1.6.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug', '~> 3.9'
-  gem 'faker', '~> 1.6', '>= 1.6.3'
   gem 'rspec-rails', '~> 5.1'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'pry-doc', '~> 1.3'
