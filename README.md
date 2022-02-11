@@ -74,7 +74,7 @@ Through developing this very simple, functional [Buddies List][project-url] appl
 
 ### Entity Relationship Diagram
 
-![ERD](buddy.svg)
+![ERD](buddies.svg)
 
 <p align="right"><a href="#top">back to top</a></p>
 <br>
