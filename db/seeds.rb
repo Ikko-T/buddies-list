@@ -28,7 +28,7 @@ user_1 = User.create!(
       age: rand(0..200),
       user_id: user_1.id,
     )
-  buddy.save!
+  buddy_1.save!
 end
 
 user_2 = User.create!(

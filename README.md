@@ -48,7 +48,7 @@ This is a Rails CRUD application built out for practice purposes. CRUD operation
 - Update
 - Delete
 
-Through developing this very simple, functional [Buddies List][project-url] application, I waa trying to get a better understanding of Rails principles of the MVC architecture (Model-View-Controller pattern). For a demonstration, please refer to the [Usage](#usage).
+Through developing this very simple, functional [Buddies List][project-url] application, I was trying to get a better understanding of Rails principles of the MVC architecture (Model-View-Controller pattern). For a demonstration, please refer to the [Usage](#usage).
 <br>
 
 ### Build With
@@ -135,7 +135,7 @@ Below are instructions on getting you a copy of the project up and running on yo
 
 ## Usage
 
-![demos](.gif)
+![demos](buddies.gif)
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -143,5 +143,9 @@ Below are instructions on getting you a copy of the project up and running on yo
 
 [app-shield]: https://img.shields.io/badge/APP-Buddies%20List-green
 [purpose-shield]: https://img.shields.io/badge/PURPOSE-Exercise-yellowgreen
-[project-url]: https://project-management-production.herokuapp.com/
+[project-url]: https://buddies-list-production.herokuapp.com/
 [npm-url]: https://www.npmjs.com/
+
+```
+
+```
