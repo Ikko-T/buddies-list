@@ -7,6 +7,7 @@
 
 ![app-shield]
 ![purpose-shield]
+![project-title]
 
 <!-- PROJECT IMAGE -->
 <div align="center">
@@ -141,8 +142,9 @@ Below are instructions on getting you a copy of the project up and running on yo
 
 <!--MARKDOWN LINKS & IMAGES -->
 
-[app-shield]: https://img.shields.io/badge/APP-Buddies%20List-green
-[purpose-shield]: https://img.shields.io/badge/PURPOSE-Exercise-yellowgreen
+[app-shield]: https://img.shields.io/badge/APP-3%20%2F%2020-brightgreen
+[project-title]: https://img.shields.io/badge/PROJECT%20TITLE-Buddies%20List-orange
+[purpose-shield]: https://img.shields.io/badge/PURPOSE-Coding%20Challenge%20Websites-blue
 [project-url]: https://buddies-list-production.herokuapp.com/
 [npm-url]: https://www.npmjs.com/
 
