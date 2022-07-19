@@ -29,6 +29,9 @@
           <li class="nav-item">
             <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "Login As Guest User", users_guest_sign_in_path, method: :post, class: "nav-link" %>
+          </li>
         <% end %>
       </ul>
     </div>

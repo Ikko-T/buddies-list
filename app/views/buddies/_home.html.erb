@@ -9,6 +9,7 @@
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-secondary" %>
       <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary" %>
+      <%= link_to "Login As Guest User", users_guest_sign_in_path, method: :post, class: "btn btn-secondary" %>
     <% end %>
   </div>
 </div>
