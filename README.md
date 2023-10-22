@@ -145,7 +145,7 @@ Below are instructions on getting you a copy of the project up and running on yo
 [app-shield]: https://img.shields.io/badge/APP-3%20%2F%2020-brightgreen
 [project-title]: https://img.shields.io/badge/PROJECT%20TITLE-Buddies%20List-orange
 [purpose-shield]: https://img.shields.io/badge/PURPOSE-Coding%20Challenge%20Websites-blue
-[project-url]: https://buddies-list-production.herokuapp.com/
+[project-url]: https://sea-lion-app-a8jz3.ondigitalocean.app/
 [npm-url]: https://www.npmjs.com/
 
 ```
