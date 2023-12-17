@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS"){5} %>
   database: buddies_list_production
   username: buddies_list
   password: <%= ENV['BUDDIES_LIST_DATABASE_PASSWORD'] %>
